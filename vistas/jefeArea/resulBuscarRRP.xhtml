@@ -6,7 +6,7 @@
       xmlns:p="http://primefaces.org/ui"
       >
     <h:head>
-        <title>Crear Usuario</title>
+        <title>Buscar por RUC, RIT, Parte</title>
         <link href=".../css/bootstrap.min.css" rel="stylesheet" />
         <link href=".../css/shop-item.css" rel="stylesheet" />
     </h:head>
@@ -25,14 +25,13 @@
                 <div  class="col-md-3" align="center"> <!-- Barra de navegación -->
                     <a class="navbar-brand" align="center" href="#">SERVICIO MÉDICO LEGAL</a>
                 </div>
-                <!-- Barra de navegación -->
-                <div class="col-md-9"> 
+                <div class="col-md-9"> <!-- Barra de navegación -->
                     <h:form>
                         <ul class="nav nav-tabs nav-justified">
 
-                            <li role="presentation"><a href="buscadorJefeArea.xhtml">Buscar</a></li>  
-                            
-                            <li role="presentation" class="active" ><a href="CrearUsuarioJefeArea.xhtml">CrearUsuario</a></li>  
+                            <li role="presentation" class="active"><a href="buscadorJefeArea.xhtml">Buscar</a></li>  
+
+                            <li role="presentation"><a href="CrearUsuarioJefeArea.xhtml">CrearUsuario</a></li> 
                             
                             <li role="presentation"><a href="semaforo.xhtml">Semáforo</a></li> 
                             
@@ -69,54 +68,32 @@
                     <!-- inicio busqueda -->
                     <div class="col-md-9">
                         <div align="center">
-                            <p:panel header="Crear Usuario">
-                                
+                            <p:panel header="Inicie la búsqueda de su formulario">
+                               
                                 <h:form>
                                     <br />
                                     <div align="center">
-                                        <h:panelGrid columns="4" cellpadding="5" class="ui-grid">
 
-                                            <p:outputLabel for="Nombre" value="Nombre:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="Nombre" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el nombre"/>
+                                        <p:dataTable var="listaFormulario" value="#" scrollRows="20" scrollable="true" liveScroll="true" scrollHeight="500" style="margin-bottom:0">
 
-                                            <p:outputLabel for="Apellido" value="Apellido:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="Apellido" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el apellido"/>
+                                            <p:column headerText="N.U.E.">
+                                                <h:outputText value="#"/>                                                 
+                                            </p:column>
 
-                                            <p:outputLabel for="run" value="R.U.N:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="run" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el R.U.N."/>
+                                            <p:column headerText="Iniciador">
+                                                <h:outputText value="#"/>                                                 
+                                            </p:column>
 
-                                            <p:outputLabel for="mail" value="Correo:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="mail" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el correo del usuario"/>
-                                        
-                                        </h:panelGrid>
-                                        <br />
-                                        
-                                        <h:panelGrid columns="3" cellpadding="5" class="ui-grid">
-                                        
-                                            <p:outputLabel for="cargo" value="Cargo: " style="width:90px"/>
-                                            <!-- necesito una lista de cargos -->
-                                            <p:selectOneMenu id="cargo" value="#" style="width:150px">
-                                                <f:selectItem itemLabel="" itemValue="" noSelectionOption="true" />
-                                                <f:selectItems value="#" />
-                                                
-                                            </p:selectOneMenu>
-                                        
-                                        </h:panelGrid>
-                                        <br />
-                                        <!--Area cargar la del jefe de área -->
-                                        <h:panelGrid columns="4" cellpadding="5" class="ui-grid">
-                                            
-                                            <p:outputLabel for="Area" value="Área:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="Area" style="margin-right:10px" value = "#" rendered="true" disabled="true"/>
-                                            
-                                            
-                                            <p:outputLabel for="unidad" value="Unidad:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="unidad" style="margin-right:10px" value = "#" rendered="true" />
-                                            
-                                            <!-- Unidad (nosé), Area (debe cargar el area del jefe de area)-->
+                                            <p:column headerText="Fecha">
+                                                <h:outputText value="#"/>                                                 
+                                            </p:column>
 
-                                        </h:panelGrid> <br />
-                                        
+                                            <p:column headerText="nose">
+                                                <h:outputText value="#"/>                                                 
+                                            </p:column>
+
+                                        </p:dataTable>
+
                                     </div>
                                     <br />
                                     <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
@@ -153,3 +130,4 @@
 
     </h:body>
 </html>
+

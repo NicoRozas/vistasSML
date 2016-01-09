@@ -25,19 +25,18 @@
                 <div  class="col-md-3" align="center"> <!-- Barra de navegación -->
                     <a class="navbar-brand" align="center" href="#">SERVICIO MÉDICO LEGAL</a>
                 </div>
-                <!-- Barra de navegación -->
-                <div class="col-md-9"> 
+                <div class="col-md-9"> <!-- Barra de navegación -->
                     <h:form>
                         <ul class="nav nav-tabs nav-justified">
 
                             <li role="presentation"><a href="buscadorJefeArea.xhtml">Buscar</a></li>  
-                            
-                            <li role="presentation" class="active" ><a href="CrearUsuarioJefeArea.xhtml">CrearUsuario</a></li>  
-                            
-                            <li role="presentation"><a href="semaforo.xhtml">Semáforo</a></li> 
-                            
-                            <li role="presentation"><a href="estadisticas.xhtml">Estadísticas</a></li> 
-                            
+
+                            <li role="presentation"><a href="CrearUsuarioJefeArea.xhtml">CrearUsuario</a></li>  
+
+                            <li role="presentation"><a href="semaforo.xhtml">Semáforo</a></li>  
+
+                            <li role="presentation" class="active" ><a href="estadisticas.xhtml">Estadísticas</a></li> 
+
                             <li role="presentation"> <h:commandLink id="cs" action="#{buscadorJefeAreaMB.salir()}" value="Cerrar sesión"></h:commandLink> </li>
 
                         </ul>
@@ -69,57 +68,14 @@
                     <!-- inicio busqueda -->
                     <div class="col-md-9">
                         <div align="center">
-                            <p:panel header="Crear Usuario">
-                                
+                            <p:panel header="Gráficos">
+
                                 <h:form>
                                     <br />
-                                    <div align="center">
-                                        <h:panelGrid columns="4" cellpadding="5" class="ui-grid">
-
-                                            <p:outputLabel for="Nombre" value="Nombre:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="Nombre" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el nombre"/>
-
-                                            <p:outputLabel for="Apellido" value="Apellido:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="Apellido" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el apellido"/>
-
-                                            <p:outputLabel for="run" value="R.U.N:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="run" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el R.U.N."/>
-
-                                            <p:outputLabel for="mail" value="Correo:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="mail" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar el correo del usuario"/>
-                                        
-                                        </h:panelGrid>
-                                        <br />
-                                        
-                                        <h:panelGrid columns="3" cellpadding="5" class="ui-grid">
-                                        
-                                            <p:outputLabel for="cargo" value="Cargo: " style="width:90px"/>
-                                            <!-- necesito una lista de cargos -->
-                                            <p:selectOneMenu id="cargo" value="#" style="width:150px">
-                                                <f:selectItem itemLabel="" itemValue="" noSelectionOption="true" />
-                                                <f:selectItems value="#" />
-                                                
-                                            </p:selectOneMenu>
-                                        
-                                        </h:panelGrid>
-                                        <br />
-                                        <!--Area cargar la del jefe de área -->
-                                        <h:panelGrid columns="4" cellpadding="5" class="ui-grid">
-                                            
-                                            <p:outputLabel for="Area" value="Área:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="Area" style="margin-right:10px" value = "#" rendered="true" disabled="true"/>
-                                            
-                                            
-                                            <p:outputLabel for="unidad" value="Unidad:" style="width:90px"></p:outputLabel>
-                                            <h:inputText id="unidad" style="margin-right:10px" value = "#" rendered="true" />
-                                            
-                                            <!-- Unidad (nosé), Area (debe cargar el area del jefe de area)-->
-
-                                        </h:panelGrid> <br />
-                                        
-                                    </div>
+                                    grafico 1
                                     <br />
-                                    <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+                                    grafico 2
+                                    <br />                                    
                                 </h:form> 
                             </p:panel>
                         </div>

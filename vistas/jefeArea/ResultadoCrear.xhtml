@@ -29,11 +29,13 @@
                     <h:form>
                         <ul class="nav nav-tabs nav-justified">
 
-                            <li role="presentation"><a href="buscadorJefeArea.xhtml">Buscar Cadena de Custodia</a></li>  
+                            <li role="presentation"><a href="buscadorJefeArea.xhtml">Buscar</a></li>  
                             
-                            <li role="presentation"><a href="Buscar.xhtml">Buscar RUC, RIT, Parte</a></li>  
+                            <li role="presentation" class="active" ><a href="CrearUsuarioJefeArea.xhtml">CrearUsuario</a></li>  
                             
-                            <li role="presentation" class="active" ><a href="">CrearUsuario</a></li>  
+                            <li role="presentation"><a href="semaforo.xhtml">Semáforo</a></li> 
+                            
+                            <li role="presentation"><a href="estadisticas.xhtml">Estadísticas</a></li> 
                             
                             <li role="presentation"> <h:commandLink id="cs" action="#{buscadorJefeAreaMB.salir()}" value="Cerrar sesión"></h:commandLink> </li>
 
@@ -66,8 +68,8 @@
                     <!-- inicio busqueda -->
                     <div class="col-md-9">
                         <div align="center">
-                            <div class="thumbnail" style="width: 785px; padding: 15px;">
-                                <h4>Se ha creado el usuario con éxito</h4><br /><br />
+                            <p:panel header="Se ha creado el usuario con éxito">
+                                
                                 <h:form>
                                     <br />
                                     <div align="center">
@@ -113,7 +115,7 @@
                                     <br />
                                     <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
                                 </h:form> 
-                            </div>
+                            </p:panel>
                         </div>
                     </div>
                     <!-- fin de busqueda -->

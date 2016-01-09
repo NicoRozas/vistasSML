@@ -29,11 +29,13 @@
                     <h:form>
                         <ul class="nav nav-tabs nav-justified">
 
-                            <li role="presentation" class="active" ><a href="buscadorJefeArea.xhtml">Buscar Cadena de Custodia</a></li>   
+                            <li role="presentation" class="active" ><a href="buscadorJefeArea.xhtml">Buscar</a></li>   
                         
-                            <li role="presentation"><a href="Buscar.xhtml">Buscar RUC, RIT, Parte</a></li>  
+                            <li role="presentation"><a href="CrearUsuarioJefeArea.xhtml">CrearUsuario</a></li>  
                             
-                            <li role="presentation"><a href="">CrearUsuario</a></li>  
+                            <li role="presentation"><a href="semaforo.xhtml">Semáforo</a></li> 
+                            
+                            <li role="presentation"><a href="estadisticas.xhtml">Estadísticas</a></li> 
                             
                             <li role="presentation"> <h:commandLink id="cs" action="#{buscadorJefeAreaMB.salir()}" value="Cerrar sesión"></h:commandLink> </li>
 
@@ -88,6 +90,70 @@
                         </div>
                     </div>
                     <!-- fin de busqueda -->
+                    
+                    <!-- inicio busqueda usuario -->
+                    <div class="col-md-9">
+                        <div align="center">
+                            <div class="thumbnail" style="width: 785px; padding: 15px;">
+                                <h4>Inicie la búsqueda de usuario</h4><br /><br />
+                                <h:form>
+                                    <br />
+                                    <div align="center">
+
+
+                                        <h:panelGrid columns="4" cellpadding="5" class="ui-grid">
+
+                                            <p:outputLabel for="rut" value="R.U.T.:" style="width:90px"></p:outputLabel>
+                                            <h:inputText id="rut" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar la búsqueda"/>
+
+                                            <h:commandButton value="Buscar" label="busca" action = "#" ></h:commandButton>  
+
+                                        </h:panelGrid>
+                                    </div>
+                                    <br />
+                                    <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+                                </h:form> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin de busqueda usuario-->
+                    
+                    <!-- inicio busqueda ruc rit parte-->
+                    <div class="col-md-9">
+                        <div align="center">
+                            <div class="thumbnail" style="width: 785px; padding: 15px;">
+                                <h4>Inicie la búsqueda de formularios</h4><br /><br />
+                                <h:form>
+                                    <br />
+                                    <div align="center">
+
+
+                                        <h:selectOneRadio id="check" value="#" required="true" requiredMessage="Ingrese que acción realizará con la evidencia">
+                                            <f:selectItem itemValue="RUC" itemLabel="R.U.C." /> <!-- agregar libreria arriba-->
+                                            <f:selectItem itemValue="RIT" itemLabel="R.I.T." />
+                                            <f:selectItem itemValue="Parte" itemLabel="Parte" />
+                                        </h:selectOneRadio><br />
+                                        <p:message for="check" display="text"/>
+
+
+                                        <h:panelGrid columns="4" cellpadding="5" class="ui-grid">
+
+                                            <p:outputLabel for="bus" value="Buscar:" style="width:90px"></p:outputLabel>
+                                            <h:inputText id="bus" style="margin-right:10px" value = "#" rendered="true" requiredMessage="Debe ingresar la búsqueda"/>
+
+                                            <h:commandButton value="Buscar" label="busca" action = "#" ></h:commandButton>  
+
+                                        </h:panelGrid>
+                                    </div>
+                                    <br />
+                                    <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+                                </h:form> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin de busqueda ruc rit parte-->
+                    
+                    
                     <!-- Footer -->
 
                 </div>
